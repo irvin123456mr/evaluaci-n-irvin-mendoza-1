@@ -11,5 +11,5 @@ import org.junit.runner.RunWith;
         features = "classpath:features",
         tags = "@testl"
 )
-public class CucumberTestSuite {
+public class CucumberTestExamen {
 }

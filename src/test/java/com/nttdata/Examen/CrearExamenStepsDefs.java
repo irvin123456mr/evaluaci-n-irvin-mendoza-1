@@ -1,4 +1,4 @@
-package com.nttdata.petStore;
+package com.nttdata.Examen;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -9,22 +9,22 @@ import net.thucydides.core.annotations.Step;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class CrearUsuarioStepsDefs {
+public class CrearExamenStepsDefs {
 
     @Step
-    CrearUsuario crearUsuario;
+    CrearExamen crearExamen;
 
 
-    @When("creo el usuario con username {string},firstname {string},lastname {string}")
-    public void crearUsuario (String username,String firsname,String lastname){
-        crearUsuario.crearUsuario(username,firsname,lastname);
+    @When("creo el codigo con Id {int},title {string})
+    public void crearExamen (int Id,String title){
+        crearExamen.crearExamen(Id,title);
 
         
     }
 
     @Then("el código de respuesta es {int}")
     public void elCódigoDeRespuestaEs(int statusCode) {
-        restAssuredThat(response -> response.statusCode(statusCode)); //verificar con video1:22
+        restAssuredThat(response -> response.statusCode(statusCode));
     }
 
     @And("el type es {string}")
